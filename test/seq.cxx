@@ -30,6 +30,10 @@
 # include <boost/preprocessor/variadic/elem.hpp>
 # include <boost/preprocessor/variadic/size.hpp>
 # include <libs/preprocessor/test/test.h>
+#if defined _MSC_VER
+#pragma warning(disable: 4003) // not enough actual parameters for macro
+#endif
+
 
 # define SEQ_NONE ()
 # define SEQ (4)(1)(5)(2)
