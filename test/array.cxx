@@ -24,6 +24,9 @@
 # include <boost/preprocessor/variadic/size.hpp>
 # include <boost/preprocessor/variadic/elem.hpp>
 # endif
+#if defined _MSC_VER
+#pragma warning(disable: 4003) // not enough actual parameters for macro
+#endif
 
 # define ARRAY_EMPTY (0, ())
 # define ARRAY_ONE (1, ())

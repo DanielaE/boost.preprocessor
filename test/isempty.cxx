@@ -11,6 +11,10 @@
 #
 # include <boost/preprocessor/config/config.hpp>
 #
+#if defined _MSC_VER
+#pragma warning(disable: 4002 4003) // too many / not enough actual parameters for macro
+#endif
+
 #if (BOOST_PP_CONFIG_FLAGS() & BOOST_PP_CONFIG_STRICT()) || (BOOST_PP_CONFIG_FLAGS() & BOOST_PP_CONFIG_MSVC())
 
 # include <boost/preprocessor/facilities/empty.hpp>
