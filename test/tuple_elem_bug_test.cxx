@@ -13,6 +13,9 @@
 # include <boost/preprocessor/control/if.hpp>
 # include <boost/preprocessor/tuple.hpp>
 # include <libs/preprocessor/test/test.h>
+#if defined _MSC_VER
+#pragma warning(disable: 4003) // not enough actual parameters for macro
+#endif
 
 #define TN_GEN_ONE(p) (1)
 #define TN_GEN_ZERO(p) (0)
