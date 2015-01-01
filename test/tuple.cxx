@@ -27,6 +27,9 @@
 # endif
 # include <libs/preprocessor/test/test.h>
 # include <libs/preprocessor/test/tuple_elem_bug_test.cxx>
+#if defined _MSC_VER
+#pragma warning(disable: 4003) // not enough actual parameters for macro
+#endif
 
 # define TUPLE (0, 1, 2, 3, 4, 5)
 # define TUPLE_NONE ()
